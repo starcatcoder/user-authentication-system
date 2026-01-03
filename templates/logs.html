@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}Histórico de Logins{% endblock %}
+
+{% block content %}
+
+<div class="main-content">
+    <div class="dashboard">
+
+        <div class="dashboard-header">
+            <h2>Histórico de Logins</h2>
+        </div>
+
+        <div class="card-info">
+            <table style="width:100%; border-collapse: collapse;">
+                <thead>
+                    <tr>
+                        <th style="text-align:left;">Usuário</th>
+                        <th>IP</th>
+                        <th>Status</th>
+                        <th>Data / Hora</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for log in logs %}
+                    <tr>
+                        <td>{{ log["username"] }}</td>
+                        <td style="text-align:center;">{{ log["ip"] }}</td>
+                        <td style="text-align:center;">
+                            {% if log["success"] %}
+                                ✅ Sucesso
+                            {% else %}
+                                ❌ Falha
+                            {% endif %}
+                        </td>
+                        <td style="text-align:center;">{{ log["timestamp"] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <div style="margin-top:20px;">
+            <a href="/dashboard" class="logout">← Voltar para o Dashboard</a>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
