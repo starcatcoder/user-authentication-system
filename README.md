@@ -4,7 +4,7 @@ Sistema completo de autenticação de usuários desenvolvido em **Flask** com fo
 
 ---
 
-## 🚀 Funcionalidades
+## Funcionalidades
 
 - Cadastro e login de usuários
 - Senhas criptografadas com **Bcrypt**
@@ -16,9 +16,9 @@ Sistema completo de autenticação de usuários desenvolvido em **Flask** com fo
 
 ---
 
-## ⚙️ Como Executar
+##  Como Executar
 
-### 1️⃣ Clonar o repositório
+### 1️ Clonar o repositório
 ```bash
 git clone https://github.com/seu-usuario/seu-repositorio.git
 
